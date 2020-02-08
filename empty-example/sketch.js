@@ -30,6 +30,12 @@ function draw() {
     }
   }
 
+  document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    blob.divide();
+  }
+})
+
   blob.show();
   blob.update();
 }

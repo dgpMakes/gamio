@@ -2,6 +2,7 @@ function Blob(x, y, r){
   this.pos = createVector(x, y);
   this.r=r;
   this.vel = createVector(0,0);
+
   this.update = function(){
     var newvel = createVector(mouseX-width/2, mouseY-height/2);
     newvel.setMag(3);
@@ -20,6 +21,14 @@ function Blob(x, y, r){
       return false;
     }
   }
+
+  this.divide = function(){
+    var newR = this.r;
+    this.r = newR/2;
+    blob1 = new Blob (this.x+20, this.y+20, newR/2);
+    blob1.show();
+  }
+
 
   this.show = function(){
     fill(255);
