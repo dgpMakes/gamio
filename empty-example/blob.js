@@ -1,8 +1,13 @@
-function Blob(x, y, r){
+function Blob(x, y, r, z){
   this.pos = createVector(x, y);
   this.r=r;
   this.vel = createVector(0,0);
-
+  if(z==0){
+    fill(random(255),random(255),random(255));
+  }
+  if(z==1){
+    fill(255);
+  }
   this.update = function(){
     var newvel = createVector(mouseX-width/2, mouseY-height/2);
     newvel.setMag(3);
@@ -29,9 +34,7 @@ function Blob(x, y, r){
     blob1.show();
   }
 
-
   this.show = function(){
-    fill(255);
     ellipse(this.pos.x, this.pos.y , this.r*2, this.r*2);
   }
 }
