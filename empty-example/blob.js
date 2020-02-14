@@ -38,4 +38,8 @@ function Blob(x, y, r, z) {
   this.show = function () {
     ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
   }
+  this.color=function(){
+    fill(random(255), random(255), random(255));
+  }
+
 }
