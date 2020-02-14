@@ -42,5 +42,4 @@ function Blob(x, y, r, z) {
     fill(random(255), random(255), random(255));
   }
 
-  }
 }
